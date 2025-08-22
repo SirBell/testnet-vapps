@@ -1,4 +1,4 @@
-# vApp Submission: [Your Project Name]
+# vApp Submission: zk-Achievements
 
 ## Verification
 ```yaml
@@ -30,23 +30,27 @@ zk-Achievements solves this by turning contributions into badges backed by proof
 ### SL Integration  
 - Use Soundness Layer as the trust layer for proof verification.
 - Store badge commitments and timestamp guarantees directly on SL.
-- Any dApp can query the SL verifier to check zk-Achievements. <BARU SAMPE SINI BAWAHNYA BELOM>    
+- Any dApp can query the SL verifier to check zk-Achievements.   
 
 ## Technical
 
 ### Architecture
-High-level system design and approach
+- User Action (e.g., GitHub PR, DAO vote, quest completion).
+- Proof Generator. Generates zk-proof of the action.
+- Soundness Layer. Stores proof commitments + timestamps.
+- Verifier. dApps and platforms verify achievements using SL APIs.
+- Badge UI. Portable identity shown via a simple web interface.
 
 ### Stack
-- **Frontend**: React/Vue/etc
-- **Backend**: Rust/Node.js/Python/etc  
-- **Blockchain**: SL + others
-- **Storage**: Database/WALRUS/IPFS/etc
+- **Frontend**: React + Tailwind
+- **Backend**: Node.js  
+- **Blockchain**: Soundness Layer as proof registry, optional L2/chain integrations.
+- **Storage**: WALRUS/IPFS for badge metadata, Postgres for indexing.
 
 ### Features
-1. Core feature 1
-2. Core feature 2  
-3. Core feature 3
+1. Proof-backed badges for actions (contributions, votes, quests).
+2. Portable zk-profile that can be used across dApps. 
+3. Privacy-first verification using SL as the trust anchor.
 
 ## Timeline
 
@@ -61,7 +65,8 @@ High-level system design and approach
 - [ ] User testing
 
 ## Innovation
-What makes this unique? Why will people use it?
+Most reputation systems in Web3 today are either centralized (GitHub, Snapshot) or fully public (on-chain activity). zk-Achievements introduces a middle ground: reputation you can prove, without oversharing.
+It makes zk-proofs approachable by wrapping them in something familiar achievements and badges. This unlocks privacy-preserving identity that’s actually usable across ecosystems.
 
 ## Contact
 Preferred contact method and where you'll share updates.
